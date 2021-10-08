@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<style>
+    .btn {
+        height: 30px;
+        width: 30px;
+        border-radius: 7px;
+        background-color: antiquewhite;
+    }
+</style>
+<body style="text-align: center;">
+
+    <div>
+        <h1>Simple Calculator</h1>
+        <div>
+            <input type="number" name="num1" id="num1" placeholder="Enter First Number">
+        </div>
+        <br>
+        <div>
+            <input type="number" name="num2" id="num2" placeholder="Enter Second Number">
+        </div>
+        <br>
+        <div>
+            <button class='btn' onclick="addition()">+</button>
+            <button class='btn' onclick="subtraction()">-</button>
+            <button class='btn' onclick="multiplication()">x</button>
+            <button class='btn' onclick="division()">/</button>
+        </div>
+        <br>
+        <br>
+        <h4 id='res'></h4>
+    </div>
+    
+    <script>
+        const addition = () => {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            document.getElementById('res').innerHTML = `Addition: ${num1 + num2}`;
+        }
+
+        const subtraction = () => {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            document.getElementById('res').innerHTML = `Subtraction: ${num1 - num2}`;
+        }
+
+        const multiplication = () => {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            document.getElementById('res').innerHTML = `Multiplication: ${num1 * num2}`;
+        }
+
+        const division = () => {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            document.getElementById('res').innerHTML = `Division: ${(num1 / num2).toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
